@@ -33,3 +33,18 @@ Idea: Make a small change (e.g. exchange 2 tasks) and compute the cost differenc
 * Track iteration improvements and exit when improvement falls under epsilon
 
 Everthing should now be computable on a GPU :smile:
+
+## Work time constraint
+
+* Build piecewise cost function that
+  * has value 1 when technician is not available
+  * has value 0 when is work time
+  * is linear between 0 and 1
+* Find a polynomial function via regression to this piecewise cost function
+  * polynomial functions are differentiable
+
+### Task collision constraint
+
+* For every technician collect all tasks for a day.
+* For every task build a cost function with normal distribution, that is above 1 during the task.
+* Multiply all cost functions together -> collisions increases cost
