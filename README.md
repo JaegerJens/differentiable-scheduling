@@ -24,6 +24,20 @@ Scheduling is a permutation problem, but permutations are not obviously differen
 
 Idea: Make a small change (e.g. exchange 2 tasks) and compute the cost difference.
 
+## Shortest path
+
+Assumptions:
+
+* 400 technician
+* every technician can work maximum 8 hours
+* 4 per day per technician
+
+Naive implementation is too expensive.
+
+Ideas:
+
+* Cluster tasks and solve problem for every cluster
+
 ## Implementation
 
 * Compile all constraints as cost functions
